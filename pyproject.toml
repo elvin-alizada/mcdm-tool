@@ -1,0 +1,79 @@
+[project]
+name = "mcdm-tool"
+version = "0.1.0"
+description = "A Python toolkit for multi-criteria decision making (MCDM): AHP, TOPSIS, sensitivity analysis, and geographic visualisations."
+readme = "README.md"
+authors = [
+  { name = "Elvin Alizada", email = "elvin.e.alizada@gmail.com" }
+]
+maintainers = [
+  { name = "Elvin Alizada", email = "elvin.e.alizada@gmail.com" }
+]
+license = { text = "MIT" }
+requires-python = ">=3.10"
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Scientific/Engineering :: GIS",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13"
+]
+
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "scipy>=1.11",
+    "matplotlib>=3.8",
+    "geopandas>=0.13",
+    "folium>=0.14",
+    "mapclassify>=2.5",
+    "openpyxl>=3.1",
+    "click>=8.1"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "coverage",
+    "ruff",
+    "ipdb",
+    "mypy"
+]
+
+[project.urls]
+homepage = "https://github.com/elvin-alizada/mcdm-tool"
+repository = "https://github.com/elvin-alizada/mcdm-tool"
+bugs = "https://github.com/elvin-alizada/mcdm-tool/issues"
+changelog = "https://github.com/elvin-alizada/mcdm-tool/blob/main/HISTORY.md"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # Pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+    "UP", # pyupgrade
+]
+
+[build-system]
+requires = ["setuptools>=69.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.uv]
+package = true
