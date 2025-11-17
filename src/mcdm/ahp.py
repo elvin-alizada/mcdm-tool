@@ -64,7 +64,7 @@ def ahp_weights(weights_dict: dict) -> dict:
 
         # Optional: check reciprocity
         if not np.allclose(arr, 1 / arr.T, atol=1e-2):
-            print(f"⚠️ Warning: Matrix '{sheet_name}' may not be fully reciprocal.")
+            print(f"!!! Warning: Matrix '{sheet_name}' may not be fully reciprocal.")
 
         # Geometric mean method
         geom_means = np.prod(arr, axis=1) ** (1 / arr.shape[0])
