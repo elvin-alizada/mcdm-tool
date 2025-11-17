@@ -82,10 +82,10 @@ The library supports full decision-analysis workflows used in economic policy, i
 > To install in editable mode:
 
 ```bash
-git clone https://github.com/elvin-alizada/mcdm-tool.git
-cd mcdm-tool
-pip install -e .
-
+    git clone https://github.com/elvin-alizada/mcdm-tool.git
+    cd mcdm-tool
+    pip install -e . 
+```
 
 ## Example Output
 
